@@ -19,19 +19,14 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 300, height: 300)
 
-for x in stride(from: 0, through: 300, by: 25){
-        canvas.drawEllipse(centreX: x, centreY: 300, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 275, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 250, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 225, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 200, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 175, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 150, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 125, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 100, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 75, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 50, width: 2, height: 2)
-        canvas.drawEllipse(centreX: x, centreY: 25, width: 2, height: 2)
+// draw dots
+let height = canvas.height
+let width = canvas.width
+
+for xPos in 0...12 {
+    for yPos in 0...12{
+        canvas.drawEllipse(centreX: width / 12 * xPos, centreY: height / 12 * yPos, width: 2, height: 2)
+    }
 }
 
 // Big Mountain Rectangle
